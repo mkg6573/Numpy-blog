@@ -100,3 +100,115 @@ array([[ 0.14022471,  0.96360618],  #random
        [ 0.49313049,  0.94909878]]) #random
 """)
 
+st.subheader("zeros function")
+st.text("Return a new array of given shape and type, filled with zeros.")
+st.code("""
+#zeros
+np.zeros((2,4))
+#output
+array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.]])
+""")
+
+st.subheader("linspace function")
+st.text("The np.linspace function in NumPy generates an array of evenly spaced numbers over a specified interval.")
+st.code("""
+#linspace
+np.linspace(1,20,10,dtype=int)
+# output
+array([ 1,  3,  5,  7,  9, 11, 13, 15, 17, 20])
+""")
+
+st.subheader("Identity function")
+st.text("The numpy.identity() function in NumPy allows you to create an identity matrix easily. The function returns a square array with ones on the main diagonal and zeros elsewhere.")
+st.code("""
+#identity
+np.identity(3,dtype=int)
+#output
+array([[1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1]])
+""")
+
+st.header("Array Attributes")
+st.subheader("ndim")
+st.text("The ndim attribute in NumPy is used to determine the number of dimensions (axes) of an array.")
+st.code("""
+# ndim
+a = np.arange(8).reshape(2,2,2)
+a.ndim
+# output
+3
+""")
+
+st.subheader("shape")
+st.text("In NumPy, you can obtain the shape of an array using the shape attribute")
+st.code("""
+#shape
+a = np.arange(8).reshape(2,2,2)
+a.shape
+#output
+(2, 2, 2)
+""")
+
+st.subheader("size")
+st.text("it returns the total number of elements in the array.")
+st.code("""
+#size
+a = np.arange(8).reshape(2,2,2)
+a.size
+#output
+8
+""")
+
+st.subheader("itemsize")
+st.text("The itemsize attribute in NumPy is a crucial feature that reveals the size, in bytes, of each element within an array.")
+st.code("""
+#itemsize
+a = np.arange(8).reshape(2,2,2)
+a.itemsize
+#output
+4
+""")
+
+st.subheader("dtype")
+st.text(" data type object (dtype) describes how the bytes in the fixed-size block of memory corresponding to an array item should be interpreted.")
+st.code("""
+#dtype
+a = np.arange(8).reshape(2,2,2)
+a.dtype
+#output
+dtype('int32')
+""")
+
+st.header("Changing Datatype")
+st.subheader("astype")
+st.text("he astype() method in NumPy is used to convert an array to a specified data type.")
+st.code("""
+#astype
+a = np.arange(8).reshape(2,2,2)
+a.astype(np.int16)
+#output
+# its converted to int 16 from 32
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]], dtype=int16)
+""")
+
+st.header("Array Functions")
+st.subheader("max/min/sum/prod")
+st.text("0 for col and 1 for row")
+st.code("""
+#max/min/sum/prod
+a1 = np.random.random((3,3))
+a1 = np.round(a1*100)
+# a1 = array([[43., 28., 71.],
+#       [27., 93., 36.],
+#       [31., 18.,  7.]])
+np.prod(a1,axis=0)
+#output
+array([35991., 46872., 17892.])
+""")
+
